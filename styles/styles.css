@@ -24,6 +24,8 @@
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -70,6 +72,7 @@ main img {
     border: var(--border-primary);
     padding: var(--spacing-sm);
     box-shadow: var(--shadow-sm);
+    float: right;
 }
 
 p {
@@ -80,13 +83,14 @@ p {
 
 aside {
     width: 20rem;
-    margin: 1rem auto;
-    border: var(--border-accent);
-    padding: var(--spacing-xl);
-    background-color: var(--bg-accent);
-    color: var(--primary-dark);
     text-align: center;
-    box-shadow: 0 0 15px rgb(52 149 235 / 0.1);
+    position: relative;
+}
+
+aside h2 {
+  position: absolute;
+  top: 47px;
+  left: 150px;
 }
 
 aside img {
@@ -102,3 +106,17 @@ footer {
     color: var(--text-dark);
 }
 
+/* Class Selectors */
+
+.box {
+    margin: 1rem auto;
+    border: var(--border-accent);
+    padding: var(--spacing-xl);
+    background-color: var(--bg-accent);
+    color: var(--primary-dark);
+    box-shadow: 0 0 15px rgb(52 149 235 / 0.1);
+}
+
+.indent {
+    padding-left: 2rem;
+}
