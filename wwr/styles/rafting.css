@@ -3,19 +3,15 @@
     --primary-dark: #0153A5;
     --primary-light: #242357;
     --accent-blue: #264653;
-    --text-light: #ecf0f1;
-    --text-dark: #555;
+    --text-dark: #313131;
     --bg-light: #f0f4f8;
     --bg-accent: #e9c46a;
     
     /* Spacing */
-    --spacing-sm: 8px;
     --spacing-md: 12px;
     --spacing-lg: 20px;
-    --spacing-xl: 1rem;
     
     /* Borders */
-    --border-primary: 1px solid var(--primary-light);
     --border-accent: 1px solid rgb(1 83 165 / 0.2);
     
     /* Fonts */
@@ -139,19 +135,8 @@ footer {
     margin-top: var(--spacing-lg);
 }
 
-.socialmedia {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-lg);
-    margin: var(--spacing-lg) 0 0 0;
-}
-
-.socialmedia a {
-    text-decoration: none;
-    color: var(--primary-dark);
-}
-
-.socialmedia a:hover {
-    color: var(--accent-blue);
+.socialmedia a img {
+    width: 32px;
+    height: 32px;
 }
 
