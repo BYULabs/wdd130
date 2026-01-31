@@ -3,10 +3,11 @@
     --primary-dark: rgb(26, 54, 93);
     --accent-blue: rgb(38, 70, 83);
     --text-dark: rgb(51, 51, 51);
+    --text-white: rgb(255, 255, 255);
     --bg-light: rgb(248, 249, 250);
     --bg-accent: rgb(248, 249, 250);
     --bg-history: rgb(238, 242, 255);
-    --footer-dark: rgb(45, 55, 72);
+    --overlay-dark: rgba(0, 0, 0, 0.4);
     
     /* Spacing */
     --spacing-md: 10px;
@@ -115,8 +116,8 @@ p, section, article {
     width: 100%;
     padding: var(--spacing-lg);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: rgb(255, 255, 255);
+    background-color: var(--overlay-dark);
+    color: var(--text-white);
     font-size: 2.5rem;
     letter-spacing: 2px;
 }
@@ -128,8 +129,8 @@ p, section, article {
     padding: 0 20px;
     margin: 0 16px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: rgb(255, 255, 255);
+    background-color: var(--overlay-dark);
+    color: var(--text-white);
     border-radius: 8px;
 }
 
