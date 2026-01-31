@@ -2,7 +2,7 @@
     /* Colors */
     --primary-dark: #1A365D;
     --accent-blue: #264653;
-    --accent-orange: #FF6B35;
+    --accent-orange: #D84315;
     --text-dark: #333333;
     --bg-light: #F8F9FA;
     --bg-accent: #F8F9FA;
@@ -207,7 +207,7 @@ footer {
 footer p {
     flex: 1;
     text-align: center;
-    color: white;
+    color: #F5F5F5;
 }
 
 .socialmedia {
