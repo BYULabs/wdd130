@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Merriweather, Georgia, serif;
+  font-size: 1.2em;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+header {
+  margin: 0 auto;
+  width: 650px;
+}
+
+h1 {
+  margin: 1rem;
+  font-size: 1.5em;
+  color: navy;
+  text-align: center;
+}
+
+form {
+  width: 650px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  display: grid;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+fieldset {
+  display: grid;
+  gap: .5rem;
+  margin: 1rem;
+  border: 2px solid #667eea;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+legend {
+  padding: 0.5rem;
+  color: navy;
+  font-size: 1.3em;
+}
+
+.form-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.form-item.column2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-item.column2 label {
+  text-align: right;
+}
+
+.form-item.column2 input {
+  text-align: left;
+}
+
+label, input, button, select, textarea {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+label {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  background-color: #f0f4ff;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  vertical-align: bottom;
+}
+
+button {
+  margin: 1.5rem auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  border-radius: .75rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+footer {
+  margin: 1rem auto 0;
+  width: 650px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #777;
+  border-top: 1px solid #ccc;
+}
