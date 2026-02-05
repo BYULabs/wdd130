@@ -144,70 +144,89 @@ p, section, article {
 
 .history {
     display: grid;
-    place-items: center;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 1fr 250px 1fr;
+    gap: 30px;
     background-color: var(--bg-history);
-    border: 2px solid var(--bg-history);
+    border: none;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgb(1 83 165 / 0.1);
-    margin: var(--spacing-lg) 0;
-    padding-bottom: 20px;
+    margin: var(--spacing-lg);
+    padding: 30px;
+    align-items: center;
 }
 
 .history h2 {
     grid-column: 1/4;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.history p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    font-size: 0.95rem;
 }
 
 .history img {
-    width: 125px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
     grid-column: 2/3;
     grid-row: 2/3;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .package {
     display: grid;
-    place-items: center;
     grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
     background-color: var(--bg-accent);
-    border: 2px solid var(--bg-accent);
+    border: none;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgb(1 83 165 / 0.1);
-    margin: var(--spacing-lg) 0;
-    padding: var(--spacing-lg);
+    margin: var(--spacing-lg);
+    padding: 30px;
 }
 
 .package h2 {
     grid-column: 1/6;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.package figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .package img {
     width: 100%;
-    padding: 20px 20px 0 20px;
-    border-radius: 8px;
+    height: 150px;
+    object-fit: cover;
+    padding: 0;
+    border-radius: 6px 6px 0 0;
 }
 
 .package figcaption {
     text-align: center;
-    padding-bottom: 10px;
+    padding: 10px 8px 0 8px;
     color: var(--primary-dark);
     font-weight: bold;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-lg);
-    background-color: var(--bg-light);
-    border-top: 3px solid var(--primary-dark);
-    box-shadow: 0 -2px 8px rgb(1 83 165 / 0.1);
-}
-
-footer p {
-    flex: 1;
-    text-align: center;
-    color: var(--text-dark);
+    font-size: 0.9rem;
 }
 
 .socialmedia {
@@ -229,3 +248,219 @@ footer p {
     border-radius: 4px;
 }
 
+footer {
+    position: relative;
+    text-align: center;
+    padding: var(--spacing-lg);
+    border-top: 3px solid var(--primary-dark);
+    margin-top: var(--spacing-lg);
+    box-shadow: 0 -2px 8px rgb(1 83 165 / 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+footer .socialmedia {
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    margin: 0;
+    padding: 0;
+}
+/* Contact Page Styles */
+.contact-header {
+    text-align: center;
+    padding: 30px var(--spacing-lg);
+    margin: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(1 83 165 / 0.2);
+}
+
+.contact-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.contact-header address {
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: var(--spacing-lg);
+    padding: var(--spacing-lg);
+}
+
+.contact-info iframe {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(1 83 165 / 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-info iframe:hover {
+    box-shadow: 0 8px 20px rgb(1 83 165 / 0.25);
+}
+
+.contact-form {
+    padding: var(--spacing-lg);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group p {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.btn-submit {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-blue);
+}
+
+.team {
+    background-color: var(--bg-accent);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(1 83 165 / 0.1);
+}
+
+.team h2 {
+    text-align: center;
+    border: none;
+    padding-bottom: var(--spacing-lg);
+}
+
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    place-items: center;
+}
+
+.team-member {
+    text-align: center;
+    margin: 0;
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-lg);
+    background-color: #ddd;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    font-family: var(--heading-font);
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.team-title {
+    color: var(--accent-blue);
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.team-bio {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    max-width: 280px;
+    font-weight: normal;
+}
